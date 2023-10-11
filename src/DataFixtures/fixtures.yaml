@@ -1,0 +1,10 @@
+App\Entity\User:
+    user_{1..3}:
+        nom: '<UserLastName()>'
+        prenom: '<UserFirstName()>'
+        email (unique): '<email()>'
+        roles: ['ROLE_USER']
+        dateDeCreation: '<dateTime()>'
+        password: '\$2y\$13\$fDjHH1gAQlNYq6R1aE3cVeRlMaOxbWK87l6OM7OJMiC7YRwLfcTSK'
+     
+      

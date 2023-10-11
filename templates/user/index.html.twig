@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello UserController!{% endblock %}
+
+{% block body %}
+<div>
+    <p> Votre espace interpupillaire est de {{user.espaceInterpupillaire}} mm</p>
+
+    <a href="{{path('app_inter_pupillaire')}}">refaire le calucl</a>
+</div>
+{% endblock %}

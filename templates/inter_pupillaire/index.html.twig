@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+{% if app.user %}
+    <a  href="{{ path('app_logout') }}"> Deconnexion </a> 
+{% endif %}
+    <div>
+        {{form(form)}}
+    </div>
+{% endblock %}
+
