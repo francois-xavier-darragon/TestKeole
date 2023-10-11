@@ -24,18 +24,7 @@ class InterPupillaireController extends AbstractController
 
         if($form->isSubmitted() && $form->isSubmitted()){
 
-            $gx = $form->get('Gx')->getData();
-            $gy = $form->get('Gy')->getData();
-            $gz = $form->get('Gz')->getData();
-            $dx = $form->get('Dx')->getData();
-            $dy = $form->get('Dy')->getData();
-            $dz = $form->get('Dz')->getData();
-
-            $DIP = sqrt(pow($gx - $dx, 2) + pow($gy - $dy, 2) + pow($gz - $dz, 2));
-            $DIP_mm = round($DIP, 2);
-
             $DIP_mm = $espaceInterpupillaireService->infoUser($form);
-            
             
             $user->setEspaceInterpupillaire($DIP_mm);
 

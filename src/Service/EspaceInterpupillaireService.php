@@ -14,14 +14,14 @@ class EspaceInterpupillaireService {
         foreach ($fields as $field) {
             $data[$field] = $form->get($field)->getData();
         }
-
+        
         $gx = $data['Gx'];
         $gy = $data['Gy'];
         $gz = $data['Gz'];
         $dx = $data['Dx'];
         $dy = $data['Dy'];
         $dz = $data['Dz'];
-
+     
         $DIP = sqrt(pow($gx - $dx, 2) + pow($gy - $dy, 2) + pow($gz - $dz, 2));
         $DIP_mm = round($DIP, 2);
 
